@@ -1,0 +1,73 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	char input;
+	int room = 1;
+	int inventory[5];
+
+	do {
+		switch (room) {
+		case 1:
+			cout << " you are in room 1, you can go down" << endl;
+			cin >> input;
+			if (input == 'd')
+				room = 3;
+			else {
+				cout << " sorry not an option." << endl;
+			}
+			break;
+		case 3:
+			cout << " you are in room 3, you can go down, left, right or up" << endl;
+			cin >> input;
+			if (input == 'd')
+				room = 5;
+			else if (input == 'l')
+				if(inventory[1] = 'key')
+				room = 2;
+
+			else if (input == 'r')
+				room = 4;
+			else if (input == 'u')
+				room = 1; 
+			else {
+				cout << " sorry not an option." << endl;
+			}
+			break;
+
+		case 5: 
+			cout << " you are in room 5, you can go up" << endl;
+			cin >> input; 
+			if (input == 'u')
+				room = 3;
+			else {
+				cout << " sorry not an option." << endl;
+			}
+			break;
+
+		case 2:
+			cout << " you are in room 2, you can go right" << endl;
+			cin >> input;
+			if (input == 'r')
+				room = 3;
+			else {
+				cout << " sorry not an option." << endl;
+			}
+			break;
+
+		case 4: 
+			cout << " you are in room 4, you can go left " << endl;
+			cin >> input;
+			if (input == 'l')
+				room = 3; 
+			else {
+				cout << " sorry not an option." << endl;
+			}
+			break;
+
+		}
+	} while (input != 'q');
+	
+
+}
